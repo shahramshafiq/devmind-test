@@ -1,7 +1,19 @@
 # devmind-test
 
-### Utility Functions
+## Available Utility Functions
 
-The project includes a `math_utils` module with a `factorial` function to calculate the factorial of a given non-negative integer.
+* Factorial function: calculates the factorial of a given non-negative integer.
 
-#### Example Usage
+## API Documentation
+
+### Factorial Function
+
+* Description: Calculate the factorial of a given non-negative integer.
+* Args:
+	+ n (int): The input number.
+* Returns:
+	+ int: The factorial of n.
+* Raises:
+	+ ValueError: If n is a negative integer.
+	+ TypeError: If n is not an integer.
+	+ OverflowError: If the calculation exceeds the maximum limit for an integer.

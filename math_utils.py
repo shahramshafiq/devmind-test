@@ -1,23 +1,27 @@
-def factorial(n):
+def calculate_factorial(n):
     """
     Calculate the factorial of a given non-negative integer.
-    
+
     Args:
-    n (int): The input number.
-    
+        n (int): The input number.
+
     Returns:
-    int: The factorial of n.
-    
+        int: The factorial of n.
+
     Raises:
-    ValueError: If n is a negative integer.
-    TypeError: If n is not an integer.
+        ValueError: If n is a negative integer.
+        TypeError: If n is not an integer.
     """
+    # Check if input is an integer
     if not isinstance(n, int):
         raise TypeError("Input must be an integer.")
+    # Check for negative numbers
     if n < 0:
         raise ValueError("Input must be a non-negative integer.")
-    elif n == 0 or n == 1:
+    # Base cases
+    if n == 0 or n == 1:
         return 1
+    # Calculate factorial
     else:
         result = 1
         for i in range(2, n + 1):

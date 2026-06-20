@@ -2,6 +2,7 @@ import unittest
 from math_utils import calculate_factorial
 
 class TestCalculateFactorial(unittest.TestCase):
+
     def test_factorial_of_zero(self):
         self.assertEqual(calculate_factorial(0), 1)
 
@@ -22,3 +23,6 @@ class TestCalculateFactorial(unittest.TestCase):
             calculate_factorial(2.5)
         with self.assertRaises(TypeError):
             calculate_factorial("5")
+
+if __name__ == '__main__':
+    unittest.main()

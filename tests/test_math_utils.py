@@ -1,24 +1,23 @@
 import unittest
-from math_utils import calculate_factorial
+from math_utils import factorial
 
-class TestCalculateFactorial(unittest.TestCase):
-
+class TestFactorialFunction(unittest.TestCase):
     def test_factorial_of_zero(self):
-        self.assertEqual(calculate_factorial(0), 1)
-
+        self.assertEqual(factorial(0), 1)
+        
     def test_factorial_of_one(self):
-        self.assertEqual(calculate_factorial(1), 1)
-
-    def test_factorial_of_positive_integer(self):
-        self.assertEqual(calculate_factorial(5), 120)
-
-    def test_factorial_of_negative_integer(self):
+        self.assertEqual(factorial(1), 1)
+        
+    def test_factorial_of_positive_numbers(self):
+        self.assertEqual(factorial(5), 120)
+        
+    def test_factorial_of_negative_numbers(self):
         with self.assertRaises(ValueError):
-            calculate_factorial(-1)
-
-    def test_factorial_of_non_integer(self):
+            factorial(-5)
+            
+    def test_factorial_of_non_integer_input(self):
         with self.assertRaises(TypeError):
-            calculate_factorial(2.5)
-
+            factorial(3.5)
+            
 if __name__ == '__main__':
     unittest.main()

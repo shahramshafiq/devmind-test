@@ -1,16 +1,17 @@
 def factorial(n):
     """
     Calculate the factorial of a given non-negative integer.
-
+    
     Args:
         n (int): The input number.
-
+    
     Returns:
         int: The factorial of n.
-
+    
     Raises:
         ValueError: If n is a negative integer.
         TypeError: If n is not an integer.
+        OverflowError: If the calculation exceeds the maximum limit for an integer.
     """
     if not isinstance(n, int):
         raise TypeError("Input must be an integer.")
@@ -19,7 +20,10 @@ def factorial(n):
     elif n == 0 or n == 1:
         return 1
     else:
-        result = 1
-        for i in range(2, n + 1):
-            result *= i
-        return result
+        try:
+            result = 1
+            for i in range(2, n + 1):
+                result *= i
+            return result
+        except OverflowError:
+            raise OverflowError("The calculation exceeds the maximum limit for an integer.")

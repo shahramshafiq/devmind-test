@@ -1,8 +1,7 @@
-# Pagination Utility
+# devmind-test
 
-The pagination utility provides a `paginate()` function to divide lists into pages of a specified size.
+## Paginate Function
 
-## Changes
+The `paginate` function is used to divide a list into chunks of a specified size.
 
-* Updated the `paginate()` function to correctly calculate the total number of pages, ensuring accurate pagination results.
-* Added unit tests to cover various scenarios, including exact divisibility and non-exact divisibility cases.
+### Usage

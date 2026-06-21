@@ -1,11 +1,6 @@
 # devmind-test
 
-## Utilities
-The project includes the following mathematical utility functions:
+### Mathematical Utilities
+The project includes a `math_utils` module with various mathematical functions, including `calculate_factorial` for calculating the factorial of a given non-negative integer.
 
-* `calculate_factorial(n)`: Calculate the factorial of a given non-negative integer.
-    + Parameters: `n` (int) - The input number.
-    + Return value: `int` - The factorial of `n`.
-    + Raises: 
-        - `ValueError` if `n` is a negative integer.
-        - `TypeError` if `n` is not an integer.
+#### Example Usage
